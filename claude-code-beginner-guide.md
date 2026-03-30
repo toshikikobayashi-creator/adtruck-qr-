@@ -1,6 +1,6 @@
 # Claude Code 初心者ガイド
 
-> AIがコードを書く時代、あなたの生産性はこう変わる
+> 経営管理の「あるある業務」が劇的に変わる ― 実際の企業事例で解説
 
 ---
 
@@ -8,7 +8,7 @@
 
 - **対象**: プログラミング初心者・非エンジニアの方も歓迎
 - **目的**: Claude Codeで何ができるのか、実例を交えてわかりやすく解説
-- **スライド資料**: [Gammaで生成したプレゼン資料はこちら](https://gamma.app/docs/wg1y0cmg5rgxs84)
+- **スライド資料**: [Gammaで生成したプレゼン資料はこちら](https://gamma.app/docs/l9qjxbrhp63kcis)
 
 ---
 
@@ -41,107 +41,115 @@
 
 ---
 
-## 2. 実例で見る「こんなことができる！」
+## 2. 経営管理の「あるある課題」をClaude Codeはこう解決する
 
-### 実例① 前提知識ゼロでも大規模プロジェクトに参画（TVer社）
+### 課題① 週次・月次レポート作成に時間がかかりすぎる
 
-**状況**: iOSエンジニアが、前提知識がほぼない大規模プロジェクトに途中参画
+**経営管理あるある**: 毎週・毎月、各部門のKPIデータをExcelに集め、グラフを作り、サマリーを書く。これだけで半日〜丸1日が消える。
 
 ```
-エンジニア: 「このプロジェクトのバグを修正したいけど、コードベースが膨大で把握できない…」
+あなた: 「各部門の売上・顧客対応件数・在庫状況のCSVから週次経営サマリーを作って」
 
 Claude Code がやったこと:
-  1. GitHub Issue の内容を自動で読み取り
-  2. 関連コードを探索して原因を特定
-  3. 修正コードを生成
-  4. PRを説明文付きで自動作成
+  1. CSVデータを自動で読み取り・集計
+  2. 前週比・前年比を算出
+  3. 異常値や注目ポイントを自動検出
+  4. 経営サマリーレポートを自動生成
 ```
 
-**効果**: 知らないコードベースでも、Claude Codeが案内役になってバグ修正をスムーズに進行。「まるでプロジェクトを熟知した先輩がペアプロしてくれるような感覚」。
-
-> 出典: [TVer Tech Blog - 前提知識ゼロでもAIで乗り切った！大規模プロジェクトでのClaude Code活用術](https://techblog.tver.co.jp/entry/claude-code-use)
-
----
-
-### 実例② 月間400件以上のPRを生産（ナレッジワーク社）
-
-**状況**: 開発者がClaude Codeを7並列で運用
-
-| | 従来 | Claude Code活用後 |
+| | Before | After |
 |---|---|---|
-| 月間PR数 | 数十件（手動） | **400件以上**（7並列運用） |
-| 作業スタイル | 1タスクずつ順番に | 複数タスクを同時並行 |
-| レビュー | 人手のみ | AI自動チェック＋人手確認 |
+| 週次レポート作成 | **3時間** | **約10分**（最終確認のみ） |
+| やること | データ収集→集計→グラフ作成→文章作成 | Claude Codeに指示→確認して送信 |
 
-**ポイント**: 1人の開発者が7つのClaude Codeを同時に走らせ、それぞれに別のタスクを割り当て。まるで「7人チーム」のように開発を進行。
-
-> 出典: [Zenn - 月間400件以上のプルリクエストを生産したClaude Code活用事例](https://zenn.dev/knowledgework/articles/20260125-create-400-prs-with-claude-code)
+> 出典: [Uravation - Claude Codeで業務自動化した事例3選](https://uravation.com/media/claude-code-automation-case-studies-2026/)
 
 ---
 
-### 実例③ 全社導入で開発コードの6〜7割をAIに（Gemcook社）
+### 課題② 予実分析に毎回時間を取られる
 
-**状況**: 2026年2月にClaude Codeを全社導入
+**経営管理あるある**: 予算と実績の差異を毎月分析して、どの費目・どの事業部が乖離しているか報告する。地道な作業の繰り返し。
 
-- 導入から数日で**数万行のコード**を生成したメンバーも
-- 開発コードの**6〜7割をAIに任せられる**ようになった
-- コードレビューの精度も格段に向上
+| 企業・ツール | Before | After | 削減率 |
+|---|---|---|---|
+| 上場企業（管理会計） | 予実分析に**1日** | **1時間**で完了 | 87%削減 |
+| Claude for Excel活用 | 財務モデル作成**8時間** | **30分** | 93%削減 |
+| 企業分析レポート | **2日間** | **3時間** | 87%削減 |
 
-**初心者にもわかるポイント**: 最初はプレビュー版を一部メンバーで試し、効果を確認してから全社展開。段階的に導入したことが成功のカギ。
+Claude Codeに「今月の予算と実績の差異を分析して、乖離が大きい費目トップ5を理由付きでまとめて」と指示するだけ。
 
-> 出典: [Zenn - Claude Code 全社導入までの意思決定と歴史](https://zenn.dev/gemcook/articles/claude-code-company-wide)
+> 出典: [Claude in Excelとは？経営データ分析・財務シミュレーションを変えるAIアドイン](https://start-link.jp/hubspot-ai/ai/genai-work/claude-excel-business-guide)
 
 ---
 
-### 実例④ Anthropic社内でも10部門が活用
+### 課題③ 「今期あといくら使える？」にすぐ答えられない
 
-Claude Code の開発元であるAnthropic社自身も、社内10部門でフル活用しています:
+**経営管理あるある**: 経営会議で突然「今の余剰資金はいくら？」と聞かれ、freeeやスプレッドシートを開いて計算し始める…
 
-| 活用例 | 成果 |
+**実際の事例**: プログラミング未経験の経営企画担当者が、Claude CodeとfreeeのAPIを連携させて「毎朝8時に自動でfreeeのデータが流れ込み、余剰資金が一目でわかるダッシュボード」を構築。
+
+**結果**: 経営会議での質問に**5秒で回答**できるようになった。
+
+> 出典: [Rimo - Claude Codeとfreeeを使った経理ダッシュボード構築](https://rimo.app/@rimo/claude-code-dashboad)
+
+---
+
+### 課題④ Salesforce等のデータ集計・分析が属人的
+
+**経営管理あるある**: CRMのデータを見たいのに、毎回エンジニアやデータ担当に依頼しないと数字が出てこない。
+
+**Rimo社の事例**: Salesforce CLIを入れて、Claude CodeがSalesforceのデータを直接読みに行ける仕組みを構築。
+
+- **担当者別の成績実績** → 自然言語で質問するだけ
+- **月次の予実・先月比較** → マネージャーミーティング前に自動集計
+- **広告分析** → **3〜5時間 → 体感7分**に短縮
+
+> 出典: [Rimo - Claude Code for Business Users](https://rimo.app/@rimo/claude-code-for-business-users)
+
+---
+
+### 課題⑤ 経営会議資料の準備が大変
+
+**経営管理あるある**: 会議前にカレンダーから参加者確認、各部門の進捗収集、KPIまとめ、アジェンダ作成…準備だけで何時間もかかる。
+
+**Claude Codeなら**: 5体のAIエージェントチームが並列で動きます:
+
+| エージェント | 役割 |
 |---|---|
-| Vimモード機能の実装 | コードの**70%をClaude Codeが自律作成** |
-| 社内ダッシュボード構築 | 開発時間を**2〜4倍短縮** |
-| ドキュメント作成 | 技術文書の自動生成 |
+| データ収集担当 | スプレッドシートからKPI・財務データを取得 |
+| 進捗確認担当 | Notionから各部門の進捗を収集 |
+| コミュニケーション分析担当 | Slackから重要な議論を抽出 |
+| 分析担当 | 課題を自動分類・スコアリング |
+| レポート作成担当 | ブリーフィング資料をワンコマンドで生成 |
 
-> 出典: [Zenn - Anthropicの10部門が実践するClaude Code活用術](https://zenn.dev/acntechjp/articles/d7e43a71cc999d)
-
----
-
-### 実例⑤ 非エンジニアにも広がる活用
-
-Claude Code はエンジニアだけのツールではありません:
-
-- **営業チーム**: 提案書作成時間が**4.2時間 → 45分（89%削減）**
-- **ServiceNow社**: 29,000人の従業員に展開、営業準備時間を**最大95%削減**
-- **楽天**: 財務・営業ワークフロー自動化で**1日→1時間（8倍の生産性向上）**
-- **Rimo社**: 非エンジニアがSalesforce連携で営業数値管理をほぼ自動化
-
-> 「むしろビジネス職の方こそ恩恵を受けやすい」（100社以上の企業支援実績から）
+> 出典: [Claude CodeはAIネイティブ経営のための最適ツール](https://posts-tokyo.com/articles/claude-code-ai-native-management)
 
 ---
 
-### 実例⑥ この資料自体がClaude Codeで作られています
+### 課題⑥ 提案書・報告書の作成に時間がかかる
 
-**今まさにやっていること**:
+| 事例 | Before | After | 効果 |
+|---|---|---|---|
+| SaaS企業・営業5名チーム | 提案書作成 **4.2時間** | **45分** | 89%削減、週の提出数3倍 |
+| ServiceNow（29,000人） | 営業準備に数時間 | **最大95%削減** | 全社展開済み |
+| 楽天 | 財務ワークフロー**1日** | **1時間** | 8倍の生産性 |
+| 商談準備（営業担当） | **30分** | **2分** | コード知識不要 |
 
-Claude Code は複数の AI を同時に動かす「エージェントチーム」が使えます:
+> 出典: [日経クロストレンド - 「Claude Code」を実務で使う超実践法](https://xtrend.nikkei.com/atcl/contents/18/00791/00014/)、[X - 池田朋弘氏](https://x.com/pop_ikeda/status/2035152169708789804)
 
-| エージェント | この資料での役割 |
-|---|---|
-| リサーチ担当 | シリョサクの原則をWeb検索・情報収集 |
-| コードベース調査担当 | プロジェクト構成の把握 |
-| Claude Code機能調査担当 | 公式ドキュメントから機能を網羅的に調査 |
-| 品質チェック担当 | 正確性・見やすさを検証 |
+---
 
-さらに **MCP（外部ツール連携）** で以下と連携:
+### おまけ: この資料自体がClaude Codeで作られています
+
+**MCP（外部ツール連携）** でGamma・GitHub・Web検索と連携し、エージェントチームが並列作業:
 
 | 連携先 | この資料での活用 |
 |---|---|
-| **Gamma** | **このプレゼン資料を自動生成！** |
-| **GitHub** | PR管理、ブランチ操作 |
-| **Web検索** | 企業事例・最新情報の収集 |
+| **Gamma** | プレゼン資料を自動生成 |
+| **GitHub** | ブランチ管理・コミット・プッシュを代行 |
+| **Web検索** | 経営管理向け企業事例をリアルタイム収集 |
 
-MCP（Model Context Protocol）= Claude Code を外部ツールにつなぐ仕組み。GitHub、Slack、Notion、Google Calendar など数多くのサービスと連携できます。
+MCP = Claude Code を外部ツールにつなぐ仕組み。freee、Salesforce、Slack、Notion、Google Calendar 等と連携可能です。
 
 ---
 
@@ -216,27 +224,28 @@ claude
 
 ---
 
-## 5. どれくらい楽になるの？（実際の企業データ）
+## 5. 経営管理の業務はどれくらい楽になる？（実データまとめ）
 
 > 以下は実際の企業事例に基づく数値です。効果はタスクや環境により異なります。
 
-| 企業・事例 | Before | After | 効果 |
+| 経営管理の業務 | Before | After | 削減率 |
 |---|---|---|---|
-| 札幌のシステム開発会社（約50名） | 通常の開発速度 | **10倍以上**の生産性 | チーム全体に定着 |
-| ServiceNow（29,000人） | 営業準備に数時間 | **最大95%削減** | 全社展開 |
-| 楽天 | 財務ワークフロー1日 | **1時間**に短縮 | 8倍の生産性 |
-| 法人営業チーム（5名） | 提案書作成4.2時間 | **45分**に短縮 | 89%削減 |
-| ナレッジワーク（1名） | 月数十件のPR | **月400件以上** | 7並列運用 |
-| Gemcook（全社） | 手動コーディング | コードの**6〜7割をAI** | 数日で数万行 |
-| Anthropic（Vimモード実装） | 通常の開発工程 | **70%を自律作成** | 2〜4倍時間短縮 |
+| 週次経営サマリー作成 | 3時間 | **約10分** | 94% |
+| 予実分析（管理会計） | 1日 | **1時間** | 87% |
+| 財務モデル作成 | 8時間 | **30分** | 93% |
+| 企業分析レポート | 2日間 | **3時間** | 87% |
+| 提案書・報告書作成 | 4.2時間 | **45分** | 89% |
+| 営業準備（ServiceNow） | 数時間 | **数分** | 最大95% |
+| 広告分析（Rimo社） | 3〜5時間 | **体感7分** | 95%超 |
+| 財務ワークフロー（楽天） | 1日 | **1時間** | 87% |
+| 経営会議での質問対応 | 調査に数十分 | **5秒** | - |
 
-### この資料の作成プロセスも実例です
+### 経営管理担当者にとっての最大のメリット
 
-1. **3つのエージェント**が並列でリサーチ（シリョサク原則、Claude Code機能、プロジェクト状況）
-2. **Web検索**で企業事例・最新情報を収集
-3. **Gamma（スライド生成AI）** と連携してプレゼン自動生成
-4. **品質チェックエージェント**が正確性を検証
-5. **Git操作**（コミット・プッシュ）もすべてClaude Codeが代行
+1. **「作業者」から「判断者」へ** - データ集計・整形はAIに任せ、分析と意思決定に集中
+2. **属人化の解消** - スキル機能で手順を定型化、誰でも同じ品質のレポートを出せる
+3. **リアルタイム経営** - freee・Salesforce等との自動連携で常に最新データにアクセス
+4. **コスト削減** - 複数の高額SaaS（Zapier $250/月、BIツール $75/月等）を月額$20で代替可能
 
 ---
 
@@ -285,13 +294,15 @@ claude
 
 ### 事例の出典
 
-- [TVer Tech Blog - 前提知識ゼロでもAIで乗り切った！大規模プロジェクトでのClaude Code活用術](https://techblog.tver.co.jp/entry/claude-code-use)
-- [Zenn - 月間400件以上のPRを生産したClaude Code活用事例（ナレッジワーク）](https://zenn.dev/knowledgework/articles/20260125-create-400-prs-with-claude-code)
-- [Zenn - Claude Code 全社導入までの意思決定と歴史（Gemcook）](https://zenn.dev/gemcook/articles/claude-code-company-wide)
-- [Zenn - Anthropicの10部門が実践するClaude Code活用術](https://zenn.dev/acntechjp/articles/d7e43a71cc999d)
-- [aptpod Tech Blog - Claude Codeを半年間実務で利用して感じた4つのポイント](https://tech.aptpod.co.jp/entry/2025/12/10/100000)
-- [GIG - Claude Codeを3ヶ月使ってわかったこと](https://giginc.co.jp/blog/giglab/claude-code-use)
-- [Claude Codeとは？企業導入で生産性10倍を実現した方法](https://firecracker.jp/blog/claude-code-introduction)
+- [Uravation - Claude Codeで業務自動化した事例3選｜請求書・メール・レポート](https://uravation.com/media/claude-code-automation-case-studies-2026/)
+- [Rimo - Claude Codeとfreeeを使った経理ダッシュボード構築](https://rimo.app/@rimo/claude-code-dashboad)
+- [Rimo - Claude Code for Business Users（Salesforce連携事例）](https://rimo.app/@rimo/claude-code-for-business-users)
+- [POSTS - Claude CodeはAIネイティブ経営のための最適ツール](https://posts-tokyo.com/articles/claude-code-ai-native-management)
+- [StartLink - Claude in Excelとは？経営データ分析・財務シミュレーション](https://start-link.jp/hubspot-ai/ai/genai-work/claude-excel-business-guide)
+- [StartLink - 非エンジニアがClaude Codeでできること](https://start-link.jp/hubspot-ai/ai/claude-code-practice/claude-code-non-engineer-use-cases)
+- [日経クロストレンド - 「Claude Code」を実務で使う超実践法 非エンジニアこそ生産性に差](https://xtrend.nikkei.com/atcl/contents/18/00791/00014/)
+- [note - 「Claude Code」が変えるマネジメントの常識](https://note.com/motohiro0215/n/n16ac36a7e5d0)
+- [ファネルAi - Claude Cowork Financeプラグインが経理を変える](https://funnel-ai.jp/media/claude-cowork-finance-ai/)
 
 ### 参考リンク
 
